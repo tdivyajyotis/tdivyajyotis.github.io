@@ -41,7 +41,7 @@ layout: default
     {{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}:
     {{ quote_value }}<span class="value"><span id="typed"></span></span>{{ quote_value }}
     {%- elsif pair.value.first.key -%}
-    {{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}: [
+    {{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}: {
     {% for value in pair.value -%}
     {% if value.url -%}
     <p class="ms">
@@ -61,7 +61,7 @@ layout: default
     </p>
     {% endif -%}
     {%- endfor -%}
-    ]
+    }
     {%- elsif pair.value.first -%}
     {{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}: [
     {% for value in pair.value -%}
